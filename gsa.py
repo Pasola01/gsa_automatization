@@ -9,45 +9,49 @@ driver.set_window_size(1108, 719)
 
 driver.get("http://gsa-admin-dev.s3-website.eu-central-1.amazonaws.com/")
 
-login_email_input = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/form/div[1]/input')
+# ---LOGIN PAGE---
+login_email_input = driver.find_element(By.XPATH, "//input[@type='email']")
 login_email_input.send_keys("jopio01@mailinator.com")
 
-login_password_input = driver.find_element(By.NAME, 'password')
+login_password_input = driver.find_element(By.XPATH, "//input[@type='password']")
 login_password_input.send_keys('Password132')
 
-switch_admin_button = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/ul/li[2]').click()
+switch_admin_button = driver.find_element(By.XPATH, "//span[text()='Admin']").click()
 
-login_button = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/form/button').click()
-time.sleep(5)
-
-add_nominee_button = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div/div/div[1]/button').click()
-
-noninee_name_input = driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/form/div[1]/div/label/input')
-noninee_name_input.send_keys('user1')
-time.sleep(5)
-
-emil_input_field = driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/form/div[2]/div/label/input')
-emil_input_field.send_keys('hello1@mailinator.com')
-
-website_input_field = driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/form/div[3]/div/label/input')
-website_input_field.send_keys('com.com')
-
-competition_selector = driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/form/div[4]/div/div/div/div').click()
-
-select_competition = driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/form/div[4]/div/div/div/div[2]').click()
-
-category_selector = driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/form/div[4]/div[2]/div/div/div').click()
+login_button = driver.find_element(By.XPATH, "//button[@class='sc-kpOJdX sc-cMljjf cDWatm']").click()
 time.sleep(3)
 
-choosen_category = driver.find_element(By.ID, 'rw_1_listbox_active_option')
-choosen_category.click()
+# ---ADD NOMINEE FORM---
+add_nominee_button = driver.find_element(By.XPATH, "//button[@class='sc-kpOJdX sc-dxgOiQ fSmGhC']").click()
 
-nominees_country_selector = driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/form/div[4]/div[3]/div/div/div').click()
+nominee_name_input_field = driver.find_element(By.XPATH, "//input[@name='name']")
+nominee_name_input_field.send_keys('user1')
+time.sleep(3)
 
-selected_country = driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/form/div[4]/div[3]/div/div/div[2]/div').click()
-time.sleep(5)
+emil_input_field = driver.find_element(By.XPATH, "//input[@name='email']")
+emil_input_field.send_keys('hello1@mailinator.com')
 
-invite_button = driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/form/div[5]/button').click()
+website_input_field = driver.find_element(By.XPATH, "//input[@name='webSite']")
+website_input_field.send_keys('com.com')
+
+competition_selector = driver.find_element(By.XPATH, "//div[@class='Dropdown-control']").click()
+
+choosen_competition = driver.find_element(By.XPATH, "//div[text()='Automatisation Competition'][@class='Dropdown-option']").click()
+
+category_selector = driver.find_element(By.XPATH, "//div[@class='rw-widget-input rw-widget-picker rw-widget-container']").click()
+time.sleep(3)
+
+category = driver.find_element(By.XPATH, "//span[text()='Best of... #1']").click()
+
+nominees_country_selector = driver.find_element(By.XPATH, "//div[text()='Select an option']").click()
+
+nominees_country = driver.find_element(By.XPATH, "//div[text()='Tanzania']").click()
+time.sleep(3)
+
+form = driver.find_element(By.XPATH, "//div[@class='ReactModal__Content ReactModal__Content--after-open']").send_keys(Keys.PAGE_DOWN)
+time.sleep(3)
+
+invite_button = driver.find_element(By.XPATH, "//button[@class='sc-kpOJdX sc-cMljjf cDWatm']").click()
 
 
 breakpoint()
