@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1284cf0b-02e5-4c11-9faf-d4e48207e603" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/super_admin/create_competition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/super_admin/create_competition.py" beforeDir="false" afterPath="$PROJECT_DIR$/super_admin/create_competition.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
