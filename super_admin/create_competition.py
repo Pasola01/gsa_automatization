@@ -28,6 +28,30 @@ choosen_region =driver.find_element(By.XPATH, "//div[text()='West Region']").cli
 
 # ---COMPETITION FORM---
 competitions_tab = driver.find_element(By.XPATH, "//a[@href='/competitions']").click()
+time.sleep(5)
+
+add_compettition_button = driver.find_element(By.XPATH, "//button[text()='Add new competition']").click()
+
+competition_name_input = driver.find_element(By.XPATH, "//input[@name='name']")
+competition_name_input.send_keys("random competition 01")
+
+competition_start_data = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[1]/div/div/input").send_keys("12/01/22")
+set_start_data = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[1]/div/div/input").send_keys(Keys.ENTER)
+
+competition_end_data = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[2]/div/div/input").send_keys("12/28/22")
+set_end_date =driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[2]/div/div/input").send_keys(Keys.ENTER)
+time.sleep(5)
+
+category_selector = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[3]/div/div/div[1]").click()
+time.sleep(5)
+
+set_category = driver.find_element(By.XPATH, "//span[text()='Best Design']").click()
+
+rioridan = driver.find_element(By.XPATH, "//input[@name='name']").click()
+
+region_country_placeholder = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[5]/div/div/div").click()
+time.sleep(7)
+tansania_country = driver.find_element(By.XPATH, "//span[text()='Tanzania']").click()
 
 
 breakpoint()
