@@ -35,11 +35,11 @@ add_compettition_button = driver.find_element(By.XPATH, "//button[text()='Add ne
 competition_name_input = driver.find_element(By.XPATH, "//input[@name='name']")
 competition_name_input.send_keys("random competition 01")
 
-competition_start_data = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[1]/div/div/input").send_keys("12/01/22")
+competition_start_data = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[1]/div/div/input").send_keys("01/01/2023")
 set_start_data = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[1]/div/div/input").send_keys(Keys.ENTER)
 
-competition_end_data = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[2]/div/div/input").send_keys("12/28/22")
-set_end_date =driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[2]/div/div/input").send_keys(Keys.ENTER)
+competition_end_data = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[2]/div/div/input").send_keys("01/31/2023")
+set_end_date = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[2]/div/div/div/div[2]/div/div/input").send_keys(Keys.ENTER)
 time.sleep(5)
 
 category_selector = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[3]/div/div/div[1]").click()
@@ -54,6 +54,25 @@ time.sleep(7)
 tansania_country = driver.find_element(By.XPATH, "//span[text()='Tanzania']").click()
 
 competition_form = driver.find_element(By.XPATH, "//div[@class='ReactModal__Content ReactModal__Content--after-open']").send_keys(Keys.PAGE_DOWN)
+
+firs_round_name = driver.find_element(By.XPATH, "//input[@name='rounds[0].name']")
+firs_round_name.send_keys("test round")
+
+active_users_first_round = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[8]/ul/li[1]/div/div[2]/div/div/div").click()
+time.sleep(5)
+
+ambassador_active_users = driver.find_element(By.XPATH, "//span[text()='AMBASSADOR']").click()
+nonination_active_users = driver.find_element(By.XPATH, "//span[text()='NOMINATION']").click()
+
+firs_round_start_date = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[8]/ul/li[1]/div/div[3]/div/div/div/div[1]/div/div/input").send_keys("01/01/2023")
+firs_round_start_date_set_time = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[8]/ul/li[1]/div/div[3]/div/div/div/div[1]/div/div/input").send_keys(Keys.ENTER)
+
+firs_round_end_date = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[8]/ul/li[1]/div/div[3]/div/div/div/div[2]/div/div/input").send_keys("01/31/2023")
+firs_round_end_date_set_time = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[8]/ul/li[1]/div/div[3]/div/div/div/div[2]/div/div/input").send_keys(Keys.ENTER)
+time.sleep(5)
+
+create_button = driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div[2]/form/div[9]/button").click()
+
 
 
 breakpoint()
