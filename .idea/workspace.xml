@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1284cf0b-02e5-4c11-9faf-d4e48207e603" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1284cf0b-02e5-4c11-9faf-d4e48207e603" name="Changes" comment="form changes">
       <change beforePath="$PROJECT_DIR$/super_admin/create_competition.py" beforeDir="false" afterPath="$PROJECT_DIR$/super_admin/create_competition.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,6 +158,14 @@
       <option name="presentableId" value="Default" />
       <updated>1667764379618</updated>
     </task>
+    <task id="LOCAL-00001" summary="form changes">
+      <created>1672668401137</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672668401137</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +178,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="form changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="form changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -53,5 +53,7 @@ region_country_placeholder = driver.find_element(By.XPATH, "/html/body/div[4]/di
 time.sleep(7)
 tansania_country = driver.find_element(By.XPATH, "//span[text()='Tanzania']").click()
 
+competition_form = driver.find_element(By.XPATH, "//div[@class='ReactModal__Content ReactModal__Content--after-open']").send_keys(Keys.PAGE_DOWN)
+
 
 breakpoint()
